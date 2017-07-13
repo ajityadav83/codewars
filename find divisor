@@ -1,0 +1,19 @@
+function divisors(integer) {
+var divisor  = [];
+  if (integer > 0){
+    for(var i= 2; i < integer ;i++){
+      var rem = 0;
+    
+      rem = integer % i;
+    console.log ( rem)
+      if (rem === 0){
+        divisor.push(i);
+      } 
+    }
+    if (divisor.length > 0){
+      return divisor;
+    }else {
+      return integer + " is prime";
+    }
+  }
+};
