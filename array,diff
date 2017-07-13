@@ -1,0 +1,17 @@
+ function array_diff(a, b) {
+    var final =[];
+  for (var i=0; i < a.length; i++){
+  var match = 0;
+    for(var j= 0; j < b.length; j++){
+      
+      if(a[i]== b[j]){
+        match++;
+      }
+    }
+
+    if (match === 0){
+      final.push(a[i]);
+    }
+  }
+  return final;
+}
