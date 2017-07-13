@@ -1,0 +1,27 @@
+function firstNonRepeatingLetter(s) {
+      var res = s.toLowerCase();
+      var arr =[];
+    for(var i = 0; i < res.length; i++){
+      var count=0;
+    
+      for(var j =i+1; j < res.length; j++){
+
+        if (res[i] == res[j]) {
+          count++;
+          arr.push(res[i]);
+        }
+      }
+
+      var check =0;
+      for (var k =0; k < arr.length; k++){
+        if (res[i] == arr[k]){
+          check++;
+        } 
+      }
+      if (count < 1 && check <1){
+        return s[i];
+      }
+     
+    }
+    return "";
+}
