@@ -1,0 +1,12 @@
+function printerError(s) {
+    var midstring = s.toLowerCase();
+  var count = 0;
+    for(var i = 0; i < midstring.length; i++){
+      if(midstring[i] != "a" && midstring[i] != "b" && midstring[i] != "c" && midstring[i] != "d" && midstring[i] != "e" && midstring[i] != "f" && midstring[i] != "g" && midstring[i] != "h" && midstring[i] != "i" && midstring[i] != "j" && midstring[i] != "k" && midstring[i] != "l" && midstring[i] != "m" ){
+        count++;
+     
+      }
+    }
+    var finStr = count + "/" + s.length;
+    return finStr;
+}
