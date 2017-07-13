@@ -1,0 +1,21 @@
+function duplicateEncode(word){
+var res =word.toLowerCase();
+  var str ="";
+    for(var i = 0; i < res.length; i++){
+      var count=0;
+      
+      for(var j =0; j < res.length; j++){
+        
+        if (res[i] == res[j]) {
+          count++;
+        }
+      }
+      if (count > 1){
+        str = str + ")";
+      }else{
+      str = str + "(";
+      }
+     
+    }
+    return str;
+}
