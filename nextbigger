@@ -1,0 +1,70 @@
+var value= 144;
+nextBigger(value);
+
+function nextBigger(n){
+  var strNum = n.toString();
+  var strArr=[];
+  var result=[];
+  var range=[];
+  var min = Math.pow(10,strNum.length-1);
+  var max = Math.pow(10,strNum.length) -1;
+  
+     if (min == 1){
+      min =0;
+    }
+  for(var z= min; z<max+1; z++){
+    var resultNum = z.toString();
+    result.push(resultNum);
+    
+  }
+  var strSum=0 ;
+   for(var y= 0; y< strNum.length; y++){
+    strSum += parseInt(strNum[y]);
+    strArr.push(strNum[y]);
+    
+  }
+  
+  
+    for (var b =0; b <result.length; b++){
+       
+      var workArr =[];
+      for(var c=0; c< result[b].length; c++){
+        workArr.push(result[b][c]);
+      }
+      var count1 =0; 
+        for (var d =0; d<result[b].length; d++){
+          var index2 = -1;
+          index2 =strArr.indexOf(result[b][d]);
+          
+        if (index2 > -1 ){
+          count1 += parseInt(result[b][d]);
+        }
+        }
+        
+      /**  var count2 =0; 
+        for (var e =0; e<strArr.length; e++){
+         
+          var index3 = -1;
+          index3 =workArr.indexOf(strArr[e]);
+          
+        if (index3 > -1 ){
+          count2 += parseInt(strArr[e]);
+        }
+        }
+      **/
+      
+      if (count1 == strSum ){
+        var workNum = parseInt(result[b]);
+        range.push(workNum);
+      }
+    }
+    
+    
+  var index3= -1;
+  index3 = range.indexOf(n);
+  if ((index3 === 0 && range.length ===0)|| index3 == range.length-1){
+    return -1;
+  } else {
+    return range[index3+1];
+  }
+}
