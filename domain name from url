@@ -1,0 +1,15 @@
+function domainName(url){
+ 
+ 
+ if (url.indexOf("http://")=== 0){
+   url= url.substr(7);
+ }
+ if (url.indexOf("https://")=== 0){
+   url= url.substr(8);
+ }
+ if (url.indexOf("www.")=== 0){
+   url= url.substr(4);
+ }
+ var arr1 = url.split(".");
+ return arr1[0];
+}
