@@ -1,0 +1,18 @@
+function isPrime(num) {
+ if (num > 1){
+   
+    for(var i= 2; i <num ;i++){
+      var rem = 0;
+    
+      rem = num % i;
+    console.log ( rem)
+      if (rem === 0){
+        return false;
+      } 
+    }
+    return true;
+  } else {
+    return false;
+  }
+ 
+}
