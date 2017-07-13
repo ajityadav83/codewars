@@ -1,0 +1,63 @@
+function score( dice ) {
+  var count1 =0;
+  var count13 = 0;
+  var count2 =0;
+  var count23 = 0;
+  var count3 =0;
+  var count33 = 0;
+  var count4 =0;
+  var count43 = 0;
+  var count5 =0;
+  var count53 = 0;
+  var count6 =0;
+  var count63 = 0;
+  
+  for (var i =0; i< dice.length; i++){
+    switch (dice[i]){
+      case 1:
+        count1++;
+        if (count1 == 3){
+          count13++;
+          count1 = 0;
+        }
+        break;
+      case 2:
+        count2++;
+        if (count2 == 3){
+          count23++;
+          count2 = 0;
+        }
+        break;
+      case 3:
+        count3++;
+        if (count3 == 3){
+          count33++;
+          count3 = 0;
+        }
+        break;
+      case 4:
+        count4++;
+        if (count4 == 3){
+          count43++;
+          count4 = 0;
+        }
+        break;
+      case 5:
+        count5++;
+        if (count5 == 3){
+          count53++;
+          count5 =0;
+        }
+        break;
+      case 6:
+        count6++;
+        if (count6 == 3){
+          count63++;
+          count6 = 0;
+        }
+        break;  
+    }
+  }
+  var greed = (count13*1000)+(count1*100)+(count23*200)+(count33*300)+(count43*400)+(count53*500)+(count5*50)+(count63*600);
+  return greed;
+}
