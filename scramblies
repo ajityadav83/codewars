@@ -1,0 +1,20 @@
+value1 = 'scriptjavx';
+value2 = 'javascript';
+scramble(value1, value2)
+
+function scramble(str1, str2) {
+str1 = str1.toLowerCase();
+str2 = str2.toLowerCase();
+ var arr1 = str1.split("");
+ var arr2 = str2.split("");
+ for (var i=0; i <arr2.length; i++){
+   var index=-1;
+   var index = arr1.indexOf(arr2[i]);
+   if (index < 0){
+     return false;
+   } 
+   arr1.splice(index,1);
+   //console.log(arr1);
+ }
+ return true;
+}
