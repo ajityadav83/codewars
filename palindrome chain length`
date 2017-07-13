@@ -1,0 +1,26 @@
+ar palindromeChainLength = function(n) {
+var workarr1=[];
+var workarr2=[];
+var palindrome = 0;
+var count = 0;
+var workStr1 = n.toString();
+
+while (palindrome <1) {
+  console.log("hello");
+  var splitString = workStr1.split("");
+  var reverseArray = splitString.reverse();
+  var workStr2= reverseArray.join("");
+  console.log(workStr1);
+  console.log(workStr2);
+   if (workStr1 == workStr2){
+     palindrome =1;
+   } else{
+     var worknum1 = parseInt(workStr1);
+     var worknum2 = parseInt(workStr2);
+     var worknum3 = worknum1+worknum2;
+     workStr1 = worknum3.toString();
+     count++;
+   }
+}
+return count;
+};
