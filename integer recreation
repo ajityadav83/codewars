@@ -1,0 +1,31 @@
+function listSquared(m, n) {
+  var finalArr= [];
+   
+   for (i=m; i<=n; i++){
+     var sum= 0;
+     for (var j =1; j<=i;j++ ){
+       var rem =0;
+       var div =0;
+       rem = i%j;
+       
+       if (rem === 0){
+         sum += Math.pow(j,2);
+       }
+       
+       
+       
+       }
+       var workArr =[];
+       if ((Math.sqrt(sum)%1) === 0 && sum> 0){
+         
+         workArr.push(i);
+         workArr.push(sum);
+         finalArr.push(workArr);
+     }
+     
+     
+     
+     
+   }
+   return finalArr;
+}
