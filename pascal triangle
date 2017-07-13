@@ -1,0 +1,34 @@
+var value1 =4;
+var value2 = 250;
+pascal(value1);
+
+function pascal(depth) {
+  var pascalRow=[];
+  var workRow =[];
+  for (i=1; i<=depth; i++){
+     // hardcoding first two rows
+  if(i == 1){
+    workRow=[1];
+    pascalRow.push(workRow);
+    }
+    if(i == 2){
+      workRow =[1,1];
+      pascalRow.push(workRow);
+     }
+     // getting values by two elements of previous row
+    if (i>2){
+    pascalRow[i-1]=[1];
+    for (var j =1; j<i-1;j++){
+      pascalRow[i-1][j]=pascalRow[i-2][j]+pascalRow[i-2][j-1];
+    }
+    // ending every row with value 1
+    pascalRow[i-1].push(1);
+    }
+  }
+  var finalarr= [];
+  for (var k =0; k <pascalRow.length;k++){
+    finalarr.push(pascalRow[k]);
+  }
+  return finalarr;
+    return pascalRow;
+}
